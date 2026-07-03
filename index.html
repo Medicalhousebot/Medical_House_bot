@@ -1,0 +1,1558 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>جزوه جامع فارماکولوژی ۲ - داروهای خون‌ساز و درمان کم‌خونی‌ها</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;700;800&display=swap');
+
+    :root {
+      --primary:    #1a237e;
+      --secondary:  #283593;
+      --accent1:    #0277bd;
+      --accent2:    #00838f;
+      --accent3:    #6a1b9a;
+      --accent4:    #ad1457;
+      --accent5:    #e65100;
+      --bg:         #f0f4ff;
+      --card:       #ffffff;
+      --text:       #1a1a2e;
+      --muted:      #546e7a;
+      --border:     #c5cae9;
+      --green:      #1b5e20;
+      --greenlight: #e8f5e9;
+      --redlight:   #ffebee;
+      --red:        #b71c1c;
+      --yellowlight:#fff8e1;
+      --yellow:     #f57f17;
+      --bluelight:  #e3f2fd;
+      --blue:       #0d47a1;
+      --purplelight:#f3e5f5;
+      --purple:     #4a148c;
+      --teallight:  #e0f7fa;
+      --teal:       #006064;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Vazirmatn', Tahoma, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.9;
+      font-size: 15px;
+      padding-bottom: 120px; /* فضای فرار از تداخل نوار ابزار پایینی */
+    }
+
+    /* ===== استایل‌های همترازی و رفع تداخل تراز خطوط با استایل فلکس قالب بومی ===== */
+    strong.em, strong.em2, strong.em3, strong.em4 {
+      display: inline;
+      font-weight: 700;
+      line-height: inherit;
+      vertical-align: baseline;
+    }
+    strong.em { color: #b71c1c; }
+    strong.em2 { color: #1565c0; }
+    strong.em3 { color: #2e7d32; }
+    strong.em4 { color: #6a1b9a; }
+
+    /* ممانعت از به‌هم‌ریختگی تگ‌های لیست بر اثر ویژگی Flexbox پیش‌فرض قالب */
+    .li-content {
+      flex: 1;
+      display: inline;
+      line-height: 1.8;
+      color: var(--text);
+    }
+
+    /* بازنویسی کاملاً خطی و امن بخش کلید-مقدار جهت عدم تداخل با فلکس‌باکس */
+    .kv-row {
+      padding: 8px 0;
+      font-size: 14px;
+      border-bottom: 1px dotted #e0e4f8;
+      line-height: 1.8;
+    }
+    .kv-key {
+      font-weight: 700;
+      color: var(--secondary);
+      display: inline;
+      margin-left: 6px;
+    }
+    .kv-value {
+      color: var(--text);
+      display: inline;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 1px 8px;
+      border-radius: 12px;
+      font-size: 11px;
+      font-weight: 700;
+      line-height: 1.3;
+      margin: 1px 2px;
+      vertical-align: middle;
+    }
+    .tag-blue   { background: #e3f2fd; color: #0d47a1; }
+    .tag-red    { background: #ffebee; color: #b71c1c; }
+    .tag-green  { background: #e8f5e9; color: #1b5e20; }
+    .tag-purple { background: #f3e5f5; color: #4a148c; }
+    .tag-orange { background: #fff3e0; color: #e65100; }
+    .tag-teal   { background: #e0f7fa; color: #006064; }
+    .tag-yellow { background: #fff8e1; color: #f57f17; }
+    .tag-pink   { background: #fce4ec; color: #880e4f; }
+
+    .hbadge {
+      display: inline-block;
+      align-items: center;
+      background: linear-gradient(135deg, #fff176, #ffee58);
+      color: #4a2c00;
+      border: 1px solid #f9a825;
+      border-radius: 6px;
+      padding: 1px 6px;
+      font-size: 11px;
+      font-weight: 700;
+      line-height: 1.3;
+      vertical-align: middle;
+    }
+
+    /* ===== COVER ===== */
+    .cover {
+      background: linear-gradient(135deg, #1a237e 0%, #283593 40%, #0277bd 100%);
+      color: white;
+      text-align: center;
+      padding: 60px 30px 50px;
+      position: relative;
+      overflow: hidden;
+    }
+    .cover::before {
+      content: '';
+      position: absolute;
+      top: -80px; left: -80px;
+      width: 300px; height: 300px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 50%;
+    }
+    .cover::after {
+      content: '';
+      position: absolute;
+      bottom: -60px; right: -60px;
+      width: 250px; height: 250px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 50%;
+    }
+    .cover .badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 50px;
+      padding: 6px 20px;
+      font-size: 13px;
+      letter-spacing: 1px;
+      margin-bottom: 18px;
+    }
+    .cover h1 {
+      font-size: 2.2em;
+      font-weight: 800;
+      margin-bottom: 10px;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+    .cover h2 {
+      font-size: 1.2em;
+      font-weight: 400;
+      opacity: 0.9;
+      margin-bottom: 30px;
+    }
+    .cover .meta {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+    .cover .meta-item {
+      background: rgba(255,255,255,0.12);
+      border-radius: 12px;
+      padding: 10px 20px;
+      font-size: 13px;
+    }
+    .cover .meta-item span { display: block; font-weight: 700; font-size: 15px; margin-top: 3px; }
+
+    /* ===== TOC ===== */
+    .toc {
+      background: white;
+      margin: 30px auto;
+      max-width: 960px;
+      border-radius: 16px;
+      padding: 30px 35px;
+      box-shadow: 0 4px 20px rgba(26,35,126,0.08);
+      border-right: 5px solid var(--primary);
+    }
+    .toc h3 {
+      font-size: 1.2em;
+      color: var(--primary);
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .toc ol {
+      padding-right: 20px;
+    }
+    .toc ol li {
+      padding: 5px 0;
+      font-weight: 600;
+      font-size: 14px;
+    }
+    .toc ol li a {
+      color: var(--accent1);
+      text-decoration: none;
+    }
+    .toc ol li a:hover { color: var(--primary); }
+
+    /* ===== MAIN WRAPPER ===== */
+    .main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 20px 60px;
+    }
+
+    /* ===== SECTION HEADER ===== */
+    .section-header {
+      border-radius: 14px;
+      padding: 18px 25px;
+      margin: 40px 0 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: white;
+      font-size: 1.25em;
+      font-weight: 700;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+    }
+    .section-header .icon {
+      font-size: 1.5em;
+      background: rgba(255,255,255,0.2);
+      border-radius: 50%;
+      width: 44px; height: 44px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .sh-blue   { background: linear-gradient(135deg, #1565c0, #0288d1); }
+    .sh-purple { background: linear-gradient(135deg, #6a1b9a, #ab47bc); }
+    .sh-teal   { background: linear-gradient(135deg, #00695c, #26a69a); }
+    .sh-red    { background: linear-gradient(135deg, #b71c1c, #ef5350); }
+    .sh-orange { background: linear-gradient(135deg, #e65100, #ff7043); }
+    .sh-green  { background: linear-gradient(135deg, #1b5e20, #43a047); }
+    .sh-indigo { background: linear-gradient(135deg, #283593, #5c6bc0); }
+    .sh-cyan   { background: linear-gradient(135deg, #006064, #00acc1); }
+
+    /* ===== SUBSECTION ===== */
+    .subsection {
+      background: white;
+      border-radius: 12px;
+      padding: 22px 25px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      border-top: 3px solid transparent;
+    }
+    .sub-blue   { border-top-color: #1565c0; }
+    .sub-purple { border-top-color: #6a1b9a; }
+    .sub-teal   { border-top-color: #00695c; }
+    .sub-red    { border-top-color: #b71c1c; }
+    .sub-orange { border-top-color: #e65100; }
+    .sub-green  { border-top-color: #1b5e20; }
+    .sub-indigo { border-top-color: #283593; }
+    .sub-pink   { border-top-color: #880e4f; }
+    .sub-brown  { border-top-color: #4e342e; }
+    .sub-cyan   { border-top-color: #006064; }
+
+    .subsection h4 {
+      font-size: 1.05em;
+      font-weight: 700;
+      margin-bottom: 14px;
+      padding-bottom: 8px;
+      border-bottom: 2px dashed var(--border);
+      color: var(--secondary);
+    }
+
+    /* ===== INFO BOX ===== */
+    .infobox {
+      border-radius: 10px;
+      padding: 14px 18px;
+      margin: 14px 0;
+      display: flex;
+      gap: 12px;
+      font-size: 14px;
+    }
+    .infobox .ib-icon { font-size: 1.3em; flex-shrink: 0; margin-top: 1px; }
+    .ib-blue   { background: var(--bluelight);   border-right: 4px solid #1565c0; color: #0d1b5e; }
+    .ib-green  { background: var(--greenlight);  border-right: 4px solid #2e7d32; color: #1b3a1f; }
+    .ib-red    { background: var(--redlight);    border-right: 4px solid #c62828; color: #5c0000; }
+    .ib-yellow { background: var(--yellowlight); border-right: 4px solid #f9a825; color: #4a2c00; }
+    .ib-purple { background: var(--purplelight); border-right: 4px solid #6a1b9a; color: #2d0048; }
+    .ib-teal   { background: var(--teallight);   border-right: 4px solid #006064; color: #003033; }
+
+    /* ===== LIST STYLES ===== */
+    .list-styled {
+      list-style: none;
+      padding: 0;
+      margin: 8px 0;
+    }
+    .list-styled li {
+      padding: 5px 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 14px;
+      border-bottom: 1px dotted #e8eaf6;
+    }
+    .list-styled li:last-child { border-bottom: none; }
+    .list-styled li::before {
+      content: '◈';
+      color: var(--accent1);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .list-styled.green li::before  { color: #2e7d32; }
+    .list-styled.red li::before    { color: #c62828; }
+    .list-styled.purple li::before { color: #6a1b9a; }
+    .list-styled.teal li::before   { color: #006064; }
+    .list-styled.orange li::before { color: #e65100; }
+
+    /* ===== TABLE ===== */
+    .table-wrap { overflow-x: auto; margin: 16px 0; border-radius: 10px; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.5px;
+    }
+    table thead tr {
+      background: var(--primary);
+      color: white;
+    }
+    table thead th {
+      padding: 12px 14px;
+      text-align: right;
+      font-weight: 700;
+    }
+    table tbody tr:nth-child(even) { background: #f5f7ff; }
+    table tbody tr:hover { background: #e8eaf6; }
+    table tbody td {
+      padding: 10px 14px;
+      border-bottom: 1px solid #e0e4f8;
+      vertical-align: top;
+    }
+    table tbody tr:last-child td { border-bottom: none; }
+
+    /* ===== GRID 2-COL ===== */
+    .grid2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 14px 0;
+    }
+    @media(max-width:640px){ .grid2 { grid-template-columns: 1fr; } }
+
+    /* ===== MINI CARD ===== */
+    .mini-card {
+      border-radius: 10px;
+      padding: 14px 16px;
+      font-size: 13.5px;
+    }
+    .mc-blue   { background: #e8eaf6; border-right: 3px solid #3949ab; }
+    .mc-green  { background: #e8f5e9; border-right: 3px solid #388e3c; }
+    .mc-red    { background: #ffebee; border-right: 3px solid #e53935; }
+    .mc-purple { background: #f3e5f5; border-right: 3px solid #8e24aa; }
+    .mc-orange { background: #fff3e0; border-right: 3px solid #f4511e; }
+    .mc-teal   { background: #e0f7fa; border-right: 3px solid #00838f; }
+    .mini-card h5 { font-weight: 700; margin-bottom: 8px; font-size: 14px; }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      background: var(--primary);
+      color: rgba(255,255,255,0.85);
+      text-align: center;
+      padding: 25px;
+      font-size: 13px;
+      margin-top: 60px;
+    }
+
+    /* ===== سیستم تعاملی یادداشت‌های درون‌متنی مینیاتوری ===== */
+    .note-marker {
+      background-color: #ffd54f !important;
+      border: 1px solid #ffb300 !important;
+      color: #000 !important;
+      border-radius: 4px !important;
+      cursor: pointer !important;
+      padding: 1px 4px !important;
+      margin: 0 3px !important;
+      font-size: 11px !important;
+      user-select: none !important;
+      display: inline-block !important;
+      vertical-align: middle !important;
+      font-weight: bold !important;
+      position: relative;
+      animation: notePulse 2s infinite;
+    }
+    @keyframes notePulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.15); }
+      100% { transform: scale(1); }
+    }
+
+    /* کدهای CSS خالص جهت سازگاری و نمایش یادداشت در نمایشگر فایل آفلاین iOS */
+    .note-tooltip {
+      display: none;
+      position: absolute;
+      bottom: 125%;
+      right: 0;
+      background: #37474f;
+      color: #ffffff;
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 12px;
+      min-width: 180px;
+      max-width: 250px;
+      z-index: 1000;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+      white-space: normal;
+      line-height: 1.5;
+      font-weight: normal;
+      text-align: right;
+    }
+    .note-marker:hover .note-tooltip, .note-marker:active .note-tooltip {
+      display: block !important;
+    }
+
+    /* ===== ساختار پنجره مودال مدیریت یادداشت‌ها ===== */
+    .modal-overlay {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(26, 35, 126, 0.5);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 10000;
+      direction: rtl;
+    }
+    .modal-card {
+      background: white;
+      border-radius: 16px;
+      padding: 24px;
+      width: 90%;
+      max-width: 500px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+      border-top: 5px solid var(--primary);
+    }
+    .modal-card h4 {
+      margin-bottom: 14px;
+      color: var(--primary);
+      font-size: 16px;
+      font-weight: bold;
+    }
+    .modal-textarea {
+      width: 100%;
+      height: 120px;
+      padding: 10px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-family: inherit;
+      resize: none;
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+    .modal-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+    }
+    .btn {
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-family: inherit;
+      font-weight: bold;
+      cursor: pointer;
+      border: none;
+      font-size: 13px;
+    }
+    .btn-primary { background: var(--primary); color: white; }
+    .btn-danger { background: var(--red); color: white; }
+    .btn-secondary { background: #eceff1; color: #37474f; }
+
+    /* ===== نوار ابزار تعاملی انتهای صفحه ===== */
+    #highlight-panel {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: white;
+      box-shadow: 0 10px 35px rgba(0,0,0,0.2);
+      border-radius: 50px;
+      padding: 10px 20px;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border: 2px solid var(--primary);
+      direction: rtl;
+      width: max-content;
+      max-width: 95%;
+    }
+    #highlight-panel span {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .hl-btn {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      border: 1px solid rgba(0,0,0,0.2);
+      cursor: pointer;
+      transition: transform 0.1s;
+    }
+    .hl-btn:hover { transform: scale(1.15); }
+    .hl-btn-yellow { background-color: #fff59d; }
+    .hl-btn-green  { background-color: #c8e6c9; }
+    .hl-btn-blue   { background-color: #bbdefb; }
+    .hl-btn-pink   { background-color: #f8bbd0; }
+    .panel-action-btn {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: bold;
+      cursor: pointer;
+      font-family: inherit;
+    }
+    .panel-action-btn-red { background: var(--red); }
+  </style>
+</head>
+<body>
+
+<!-- نوار شناور ابزار چند پلتفرمی -->
+<div id="highlight-panel">
+  <span>🖍️ ابزار مطالعه:</span>
+  <button class="hl-btn hl-btn-yellow" onclick="applyColorHighlight('#fff59d')" title="زرد"></button>
+  <button class="hl-btn hl-btn-green" onclick="applyColorHighlight('#c8e6c9')" title="سبز"></button>
+  <button class="hl-btn hl-btn-blue" onclick="applyColorHighlight('#bbdefb')" title="آبی"></button>
+  <button class="hl-btn hl-btn-pink" onclick="applyColorHighlight('#f8bbd0')" title="صورتی"></button>
+  <button class="panel-action-btn" onclick="addNoteAtSelection()">📝 یادداشت</button>
+  <button class="panel-action-btn" onclick="viewAllNotes()">🔍 لیست یادداشت‌ها</button>
+  <button class="panel-action-btn panel-action-btn-red" onclick="clearSelectedHighlight()">❌ پاک‌کردن</button>
+  <button class="panel-action-btn" style="background:#2e7d32;" onclick="exportModifiedHTML()">📥 خروجی گرفتن از فایل</button>
+</div>
+
+<!-- پنجره مودال ثبت/ویرایش یادداشت -->
+<div class="modal-overlay" id="note-edit-modal">
+  <div class="modal-card">
+    <h4 id="modal-title">ثبت یادداشت جدید در این محل</h4>
+    <textarea class="modal-textarea" id="modal-note-input" placeholder="نکته مهم کلاسی خود را جهت مرور سریع بنویسید..."></textarea>
+    <div class="modal-actions">
+      <button class="btn btn-primary" onclick="saveNoteChanges()">💾 ذخیره تغییرات</button>
+      <button class="btn btn-danger" id="btn-delete-note" onclick="deleteActiveNote()">❌ حذف یادداشت</button>
+      <button class="btn btn-secondary" onclick="closeNoteModal()">انصراف</button>
+    </div>
+  </div>
+</div>
+
+<!-- پنجره مودال لیست همه‌ی یادداشت‌ها -->
+<div class="modal-overlay" id="all-notes-modal">
+  <div class="modal-card" style="max-height: 80%; overflow-y: auto; max-width: 600px;">
+    <h4>📋 تمام یادداشت‌های ثبت‌شده شما</h4>
+    <div id="all-notes-list" style="margin-bottom: 20px;">
+      <!-- لیست پویا به صورت خودکار پر خواهد شد -->
+    </div>
+    <div class="modal-actions">
+      <button class="btn btn-secondary" onclick="closeAllNotesModal()">بستن پنجره</button>
+    </div>
+  </div>
+</div>
+
+<div class="cover">
+  <div class="badge">درس فارماکولوژی ۲ - فارماکولوژی خون</div>
+  <h1>داروهای مورد استفاده در کم‌خونی‌ها و فاکتورهای رشد خون‌ساز</h1>
+  <div class="meta">
+    <div class="meta-item">جلسه:<span>1</span></div>
+    <div class="meta-item">نویسنده و ویراستار:<span>احمدرضا عبداللهی‌پور </span></div>
+                <div class="meta-item">برای دریافت فایل های بیشتر به بات تلگرامی مراجعه کنید
+                        
+<a href="https://t.me/Medical_house_bot" target="_blank" style="
+    display: inline-block;
+    padding: 5px 12px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: Tahoma, sans-serif;
+    font-weight: bold;">
+    🤖 شروع گفتگو با بات
+</a></div>
+
+  </div>
+</div>
+
+<div class="toc">
+  <h3>📋 فهرست مطالب جهت دسترسی سریع</h3>
+  <ol>
+    <li><a href="#sec1">انواع کم‌خونی و ویژگی‌های آزمایشگاهی تمایزی</a></li>
+    <li><a href="#sec2">فیزیولوژی آهن، نقش، توزیع و علل نیاز به آن</a></li>
+    <li><a href="#sec3">اندیکاسیون‌های تجویز و درمان با آهن خوراکی</a></li>
+    <li><a href="#sec4">مکمل‌های آهن تزریقی (پارنترال) و مقایسه جامع فرمولاسیون‌ها</a></li>
+    <li><a href="#sec5">سمیت و مسمومیت حاد و مزمن با آهن (هموکروماتوز و چنگ‌کننده‌ها)</a></li>
+    <li><a href="#sec6">ویتامین B12 (کوبالامین)، مسیر جذب، علل کمبود و درمان</a></li>
+    <li><a href="#sec7">اسید فولیک (فولات)، نقایص جنینی، اتیولوژی کمبود و فارماکوتراپی</a></li>
+    <li><a href="#sec8">فاکتورهای رشد خون‌ساز (اریتروپویتین، G-CSF و آگونیست‌های TPO)</a></li>
+    <li><a href="#sec9">جدول مقایسه‌ای نهایی و نکات طلایی و امتحانی</a></li>
+  </ol>
+</div>
+
+<div class="main">
+
+  <!-- ===================== SECTION 1 ===================== -->
+  <div class="section-header sh-blue" id="sec1">
+    <div class="icon">🩸</div>
+    <span>۱. انواع کم‌خونی و ویژگی‌های آزمایشگاهی تمایزی</span>
+  </div>
+
+  <div class="subsection sub-blue">
+    <h4>کم‌خونی‌های تغذیه‌ای و مشخصات مرفولوژیک سلولی</h4>
+    <p>
+      بر اساس اتیولوژی و مرفولوژی میکروسکوپی سلول‌های قرمز خون، کم‌خونی‌ها به دسته‌های متفاوتی تقسیم می‌شوند که تشخیص افتراقی آن‌ها بر اساس شاخص‌های حجم گلبول قرمز (<strong class="em2">MCV</strong>) و غلظت هموگلوبین سلولی (<strong class="em2">MCHC</strong>) صورت می‌پذیرد.
+    </p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>نوع نقص تغذیه‌ای</th>
+            <th>نوع مرفولوژیک آنمی</th>
+            <th>یافته‌های آزمایشگاهی و شاخص‌های خون‌شناسی (Lab Parameters)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>آهن (Iron)</strong></td>
+            <td>Microcytic, hypochromic (کمتر از حد طبیعی در ابعاد و رنگ)</td>
+            <td>
+              کاهش <strong class="em">MCV &lt; 80 fL</strong> و کاهش <strong class="em">MCHC &lt; 30%</strong><br>
+              کاهش آهن سرم (SI &lt; 30 mcg/dL)، افزایش TIBC، کاهش اشباع ترانسفرین (TSAT &lt; 10%)، کاهش فریتین سرم (Ferritin &lt; 20 mcg/L)
+            </td>
+          </tr>
+          <tr>
+            <td><strong>اسید فولیک (Folic Acid)</strong></td>
+            <td>Macrocytic, normochromic (مگالوبلاستیک با رنگ نرمال)</td>
+            <td>
+              افزایش <strong class="em">MCV &gt; 100 fL</strong> با MCHC طبیعی یا افزایش یافته.<br>
+              کاهش سطح فولات سرم به میزان <strong class="em">&lt; 4 ng/mL</strong>
+            </td>
+          </tr>
+          <tr>
+            <td><strong>ویتامین B12</strong></td>
+            <td>Macrocytic, normochromic (آنمی مگالوبلاستیک و پرنیشیوز)</td>
+            <td>
+              افزایش <strong class="em">MCV &gt; 100 fL</strong>.<br>
+              کاهش سطح کوبالامین سرم (<strong class="em">&lt; 100 pmol/L</strong>)، افزایش هموسیستئین سرم (&gt; 13 μmol/L)، افزایش متیل‌مالونیک اسید سرم (&gt; 0.4 μmol/L) یا متیل‌مالونیک اسید ادرار (&gt; 3.6 μmol/mol creatinine)
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="infobox ib-blue">
+      <span class="ib-icon">ℹ️</span>
+      <div>
+        <strong>نکته تشخیصی بسیار مهم:</strong> کم‌خونی‌های مگالوبلاستیک ناشی از کمبود ویتامین B12 و اسید فولیک از نظر میکروسکوپی و مرفولوژی خون محیطی <strong class="em">کاملاً مشابه یکدیگر</strong> هستند. تمایز کلیدی این دو در بروز <strong class="em">تظاهرات و نقایص نورولوژیک (عصبی)</strong> است که منحصراً در کمبود ویتامین B12 بروز می‌کند و در کمبود فولات وجود ندارد. همچنین آزمایش متیل‌مالونیک اسید (MMA) در تفکیک بیوشیمیایی کاربرد اختصاصی دارد.
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ===================== SECTION 2 ===================== -->
+  <div class="section-header sh-indigo" id="sec2">
+    <div class="icon">⚙️</div>
+    <span>۲. فیزیولوژی آهن، نقش، توزیع و علل نیاز به آن</span>
+  </div>
+
+  <div class="subsection sub-indigo">
+    <h4>جذب، انتقال، ذخیره و دفع آهن</h4>
+    <p>
+      یون آهن در هسته هموگلوبین قرار داشته و نقش حیاتی در انتقال اکسیژن از ریه به بافت‌ها دارد. کاهش سطح آهن بدن به شدت اکسیژن‌رسانی به سلول‌ها را مختل کرده و موجب ضعف عمومی شدید و کاهش ابعاد سلول‌های قرمز (کاهش MCV) می‌گردد.
+    </p>
+
+    <div class="infobox ib-red">
+      <span class="ib-icon">⚠️</span>
+      <div>
+        <strong>عدم وجود سیستم دفع فعال:</strong> بدن انسان هیچ مکانیسم دفع عمومی و فعالی برای دفع آهن از طریق سیستم ادراری یا گوارشی ندارد. بنابراین، تنظیم تعادل آهن در بدن منحصراً از طریق تنظیم میزان <strong class="em">جذب در روده باریک (دئودنوم)</strong> کنترل می‌شود. افزایش یا کاهش آهن بدن مستقیماً وابسته به کارایی جذب گوارشی و وضعیت ذخایر سلولی است.
+      </div>
+    </div>
+
+    <h4>توزیع آهن در بدن انسان‌های بالغ نرمال (بر اساس اسلایدهای مرجع)</h4>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>بخش‌های اصلی توزیع آهن در بدن</th>
+            <th>محتوای آهن در مردان بالغ (میلی‌گرم)</th>
+            <th>محتوای آهن در زنان بالغ (میلی‌گرم)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>هموگلوبین (موجود در گلبول‌های قرمز)</strong></td>
+            <td>3050 mg</td>
+            <td>1700 mg</td>
+          </tr>
+          <tr>
+            <td><strong>میوگلوبین (عضلات اسکلتی)</strong></td>
+            <td>430 mg</td>
+            <td>300 mg</td>
+          </tr>
+          <tr>
+            <td><strong>آنزیم‌های وابسته به آهن (سیتوکروم‌ها و غیره)</strong></td>
+            <td>10 mg</td>
+            <td>8 mg</td>
+          </tr>
+          <tr>
+            <td><strong>بخش در حال انتقال (متصل به ترانسفرین)</strong></td>
+            <td>8 mg</td>
+            <td>6 mg</td>
+          </tr>
+          <tr>
+            <td><strong>ذخایر سلولی (فریتین و هموسیدرین در کبد و طحال)</strong></td>
+            <td>750 mg</td>
+            <td>300 mg</td>
+          </tr>
+          <tr style="background-color: #e8eaf6; font-weight: bold;">
+            <td>مجموع آهن کل بدن (Total)</td>
+            <td>4248 mg <span style="font-size:11px; font-weight:normal;">(بر اساس وزن استاندارد ۸۰ کیلوگرم)</span></td>
+            <td>2314 mg <span style="font-size:11px; font-weight:normal;">(بر اساس وزن استاندارد ۵۵ کیلوگرم)</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+  <!-- ===================== SECTION 3 ===================== -->
+  <div class="section-header sh-orange" id="sec3">
+    <div class="icon">👶</div>
+    <span>۳. اندیکاسیون‌های تجویز و درمان با آهن خوراکی</span>
+  </div>
+
+  <div class="subsection sub-orange">
+    <h4>چه افرادی به مکمل‌های پیشگیرانه یا درمانی آهن نیاز دارند؟</h4>
+    <div class="grid2">
+      <div class="mini-card mc-orange">
+        <h5>۱. دوره‌های رشد فیزیولوژیک و نوزادی</h5>
+        <ul class="list-styled orange">
+          <li>
+            <span class="li-content"><strong>نوزادان نارس (Preterm):</strong> به علت عدم تکمیل ذخایر مادری و رشد سریع، نیاز قطعی دارند. مکمل از هفته ۶ الی ۸ شروع می‌شود.</span>
+          </li>
+          <li>
+            <span class="li-content"><strong>نوزادان طبیعی (Term):</strong> از سن ۴ الی ۶ ماهگی به علت عدم کفایت آهن شیر مادر و جذب کم دستگاه گوارش، قطره آهن رایگان دریافت می‌کنند.</span>
+          </li>
+          <li>
+            <span class="li-content"><strong>دوره‌های رشد سریع کودکان و بارداری/شیردهی:</strong> در زمان بارداری نیاز مادر چند برابر شده و در شیردهی نیاز به آهن ۲ برابر حالت عادی می‌گردد.</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="mini-card mc-red">
+        <h5>۲. از دست رفتن خون (Bleeding) - شایع‌ترین عامل</h5>
+        <ul class="list-styled red">
+          <li>
+            <span class="li-content"><strong>خانم‌ها در سنین باروری:</strong> خونریزی‌های شدید ماهیانه (Menorrhagia) علت اصلی کمبود آهن است.</span>
+          </li>
+          <li>
+            <span class="li-content"><strong>خونریزی‌های پس از یائسگی:</strong> به علت پولیپ، فیبروم رحمی یا ضایعات تخمدانی.</span>
+          </li>
+          <li>
+            <span class="li-content"><strong class="em">هشدار تشخیصی حیاتی:</strong> اگر یک <strong class="em">مرد</strong> یا یک <strong class="em">زن یائسه</strong> با آنمی فقر آهن مراجعه کند، اولین شک بالینی <strong class="em">خونریزی مخفی گوارشی (Occult Bleeding)</strong> است که می‌تواند ناشی از سرطان کولون باشد و سریعاً باید تست مدفوع (FOBT) و اندوسکوپی/کولونوسکوپی انجام شود.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="grid2" style="margin-top:15px;">
+      <div class="mini-card mc-blue">
+        <h5>۳. جذب ناکافی دستگاه گوارش</h5>
+        <p style="font-size:13px; line-height:1.7;">
+          افرادی که تحت عمل جراحی برداشتن کامل یا جزئی معده (<strong class="em2">Gastrectomy</strong>) قرار گرفته‌اند، عمل‌های اسلیو و بای‌پس معده داشته‌اند یا مبتلا به بیماری‌های روده نظیر التهاب روده کرون و سلیاک در ناحیه دئودنوم هستند، به علت حذف اسید معده و کاهش سطح کارایی روده، توانایی جذب خوراکی آهن را از دست داده و نیاز به فرآورده‌های تزریقی یا دوزهای خاص دارند.
+        </p>
+      </div>
+
+      <div class="mini-card mc-teal">
+        <h5>۴. بیماران کلیوی و دیالیزی (CKD)</h5>
+        <p style="font-size:13px; line-height:1.7;">
+          بیماران مبتلا به نارسایی مزمن کلیه در هر جلسه همودیالیز اریتروسیت زیادی از دست می‌دهند. به دلیل تجویز <strong class="em3">اریتروپویتین (Epoetin/Eprex)</strong>، سرعت ساخت سلول‌های قرمز بسیار بالا رفته و ذخایر آهن سریعاً تخلیه می‌گردد؛ بنابراین این بیماران نیازمند دوزهای نگه‌دارنده آهن (غالباً وریدی) می‌باشند.
+        </p>
+      </div>
+    </div>
+
+    <h4 style="margin-top: 30px;">درمان با آهن خوراکی (Oral Iron Therapy)</h4>
+    <p>
+      درمان خوراکی، ارجح‌ترین، کم‌تهاجمی‌ترین و راحت‌ترین مسیر درمانی است. دوز معمول درمانی روزانه معادل <strong class="em2">۱۵۰ تا ۲۰۰ میلی‌گرم آهن عنصری (Elemental Iron)</strong> یا تجویز پیشگیرانه ۵۰ تا ۱۰۰ میلی‌گرم روزانه است.
+    </p>
+
+    <div class="table-wrap" style="margin-top: 15px;">
+      <table>
+        <thead>
+          <tr>
+            <th>نمک فروز (Ferrous Salt)</th>
+            <th>دوز فرآورده دارویی</th>
+            <th>محتوای آهن عنصری به میلی‌گرم</th>
+            <th>درصد آهن عنصری فرآورده</th>
+            <th>دوز معمول روزانه بالغین جهت درمان</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Ferrous Fumarate</strong></td>
+            <td>325 mg</td>
+            <td>106 mg</td>
+            <td><strong>۳۳٪</strong></td>
+            <td>۲ تا ۳ قرص در روز</td>
+          </tr>
+          <tr>
+            <td><strong>Ferrous Sulfate (Anhydrous)</strong></td>
+            <td>200 mg</td>
+            <td>65 mg</td>
+            <td><strong>۳۰٪</strong></td>
+            <td>۲ تا ۴ قرص در روز</td>
+          </tr>
+          <tr>
+            <td><strong>Ferrous Sulfate (Hydrated)</strong></td>
+            <td>325 mg</td>
+            <td>65 mg</td>
+            <td><strong>۲۰٪</strong></td>
+            <td>۲ تا ۴ قرص در روز</td>
+          </tr>
+          <tr>
+            <td><strong>Ferrous Gluconate</strong></td>
+            <td>325 mg</td>
+            <td>36 mg</td>
+            <td><strong>۱۱.۶٪</strong></td>
+            <td>۳ تا ۴ قرص در روز</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="infobox ib-yellow">
+      <span class="ib-icon">⚠️</span>
+      <div>
+        <strong>تداخلات و عوارض گوارشی آهن خوراکی:</strong>
+        <ul style="margin-right: 15px;">
+          <li>بهترین جذب با معده خالی (قبل از غذا) رخ می‌دهد؛ اما در صورت عدم تحمل به دلیل تهوع، درد اپی‌گاستر، کرامپ شکمی و یبوست، همراه با غذا یا پس از آن مصرف شود.</li>
+          <li><strong class="em">چای و قهوه:</strong> تانن‌های موجود در چای به شدت با آهن باند شده و جذب آن را سرکوب می‌کنند. حداقل ۲ ساعت فاصله زمانی با غذا و مکمل الزامی است.</li>
+          <li><strong class="em">سیاه شدن مدفوع:</strong> فرآیندی کاملاً طبیعی و بی‌خطر است. این عارضه به هیچ وجه نباید با <strong class="em">ملنا (Melena - خونریزی گوارشی فوقانی)</strong> اشتباه گرفته شود و حتماً باید به بیمار آموزش داده شود تا از قطع خودسرانه دارو جلوگیری گردد.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ===================== SECTION 4 ===================== -->
+  <div class="section-header sh-teal" id="sec4">
+    <div class="icon">💉</div>
+    <span>۴. مکمل‌های آهن تزریقی (پارنترال) و مقایسه جامع فرمولاسیون‌ها</span>
+  </div>
+
+  <div class="subsection sub-teal">
+    <h4>موارد مصرف آهن تزریقی (Parenteral Iron)</h4>
+    <p>
+      برای بیمارانی که ناتوان در تحمل عوارض گوارشی آهن خوراکی هستند، بیمارانی که نقص‌های شدید و فعال در جذب گوارشی دارند (نظیر مبتلایان به بیماری‌های التهابی فعال روده یا گاسترکتومی)، و یا بیمارانی که نیازمند تصحیح سریع هموگلوبین پیش از جراحی می‌باشند استفاده می‌شود. همچنین در نارسایی مزمن کلیه (CKD) همراه دیالیز بسیار پرکاربرد است.
+    </p>
+
+    <div class="infobox ib-teal">
+      <span class="ib-icon">💡</span>
+      <div>
+        <strong>آهن وریدی در ایران (آمپول Venofer):</strong> شایع‌ترین فرآورده تزریقی در ایران، آمپول آهن ساکروز با نام تجاری <strong class="em3">ونوفیر (Venofer)</strong> است که رنگی سیاه شبیه قیر دارد. این دارو در دیالیزی‌ها مستقیماً در انتهای جلسه دیالیز به ست دیالیز تزریق شده و نیازی به حفاظت در برابر نور ندارد زیرا به سرعت وارد بدن می‌شود. اما در بیماران غیردیالیزی، ونوفیر درون سرم رقیق شده و باید مسیر ترزیق سرم به علت حساسیت دارو به نور با <strong class="em3">فویل آلومینیومی</strong> پوشانده شود.
+      </div>
+    </div>
+
+    <h4>جدول مرجع و مقایسه‌ای فرآورده‌های آهن پارنترال (به طور کامل بر اساس جدول اسلاید ۷)</h4>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>نام فرآورده دارویی (Drug Generic)</th>
+            <th>نام تجاری (Trade Name)</th>
+            <th>حداکثر دوز تأیید شده (mg)</th>
+            <th>امکان انفوزیون دوز کل (TDI)</th>
+            <th>نیاز به پیش‌دارو (Premedication)</th>
+            <th>تست دوز اول (Test Dose)</th>
+            <th>غلظت آهن عنصری (mg/mL)</th>
+            <th>ماده نگه‌دارنده (Preservative)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Iron dextran (High MW)</strong></td>
+            <td>Dexferrum</td>
+            <td>100 mg</td>
+            <td>بله (Yes)</td>
+            <td>فقط در TDI</td>
+            <td><strong class="em">الزامی است</strong></td>
+            <td>50 mg/mL</td>
+            <td>ندارد (None)</td>
+          </tr>
+          <tr>
+            <td><strong>Iron dextran (Low MW)</strong></td>
+            <td>INFeD</td>
+            <td>100 mg</td>
+            <td>بله (Yes)</td>
+            <td>فقط در TDI</td>
+            <td><strong class="em">الزامی است</strong></td>
+            <td>50 mg/mL</td>
+            <td>ندارد (None)</td>
+          </tr>
+          <tr>
+            <td><strong>Ferric gluconate</strong></td>
+            <td>Ferrlecit</td>
+            <td>125 mg</td>
+            <td>خیر (No)</td>
+            <td>ندارد (No)</td>
+            <td>توصیه در صورت سابقه آلرژی</td>
+            <td>12.5 mg/mL</td>
+            <td>بنزيل الکل (Benzyl alcohol)</td>
+          </tr>
+          <tr>
+            <td><strong>Iron sucrose</strong></td>
+            <td>Venofer</td>
+            <td>200 to 300 mg</td>
+            <td>خیر (No)</td>
+            <td>ندارد (No)</td>
+            <td>توصیه در صورت سابقه آلرژی</td>
+            <td>20 mg/mL</td>
+            <td>ندارد (None)</td>
+          </tr>
+          <tr>
+            <td><strong>Ferumoxytol</strong></td>
+            <td>Feraheme</td>
+            <td>510 mg</td>
+            <td>خیر (No)</td>
+            <td>ندارد (No)</td>
+            <td>نیاز ندارد (No)</td>
+            <td>30 mg/mL</td>
+            <td>ندارد (None)</td>
+          </tr>
+          <tr>
+            <td><strong>Iron isomaltoside</strong></td>
+            <td>Monofer</td>
+            <td>20 mg/kg</td>
+            <td>بله (Yes)</td>
+            <td>ندارد (No)</td>
+            <td>نیاز ندارد (No)</td>
+            <td>100 mg/mL</td>
+            <td>ندارد (None)</td>
+          </tr>
+          <tr>
+            <td><strong>Ferric carboxymaltose</strong></td>
+            <td>Ferinject / Injectafer</td>
+            <td>20 mg/kg (max 1000 mg)</td>
+            <td>خیر (No)</td>
+            <td>ندارد (No)</td>
+            <td>نیاز ندارد (No)</td>
+            <td>50 mg/mL</td>
+            <td>ندارد (None)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+  <!-- ===================== SECTION 5 ===================== -->
+  <div class="section-header sh-red" id="sec5">
+    <div class="icon">🚨</div>
+    <span>۵. سمیت و مسمومیت حاد و مزمن با آهن (هموکروماتوز و چنگ‌کننده‌ها)</span>
+  </div>
+
+  <div class="subsection sub-red">
+    <h4>الف) مسمومیت حاد با آهن (Acute Iron Toxicity)</h4>
+    <p>
+      بیشتر در کودکان به صورت تصادفی (به دلیل شکل شکلاتی یا رنگی قرص‌ها) یا در بزرگسالان به قصد خودکشی رخ می‌دهد. مسمومیت حاد می‌تواند منجر به نارسایی حاد کبد، شوک عروقی، اسیدوز متابولیک و کما گردد.
+    </p>
+    <ul class="list-styled red" style="margin-bottom: 15px;">
+      <li>
+        <span class="li-content"><strong>اقدام درمانی اولیه:</strong> تعبیه لوله معده (<strong class="em">NG Tube</strong>) و شستشوی معده با محلول شستشو جهت تخلیه فیزیکی قرص‌های حل نشده.</span>
+      </li>
+      <li>
+        <span class="li-content"><strong>محدود کردن جذب گوارشی:</strong> استفاده از شارکول (زغال فعال) و سوربیتول (جهت ترانزیت سریع روده‌ای و دفع مدفوعی). همچنین شستشوی کامل روده (<strong class="em">Whole bowel irrigation</strong>).</span>
+      </li>
+      <li>
+        <span class="li-content"><strong>درمان سیستمیک آنتی‌دوت:</strong> تزریق وریدی <strong class="em3">دفروکسامین (Desferal / Deferoxamine)</strong> که یک چنگ‌کننده قوی آهن است و آهن متصل شده را از طریق ادرار با رنگ قرمز دفع می‌کند.</span>
+      </li>
+    </ul>
+
+    <h4>ب) مسمومیت مزمن با آهن (Chronic Iron Toxicity / Hemochromatosis)</h4>
+    <p>
+      به دو علت عمده بروز می‌کند: علت ارثی (<strong class="em">هموکروماتوز ژنتیکی</strong> با افزایش جذب خودبه‌خودی آهن روده) و یا دریافت مکرر خون در بیماران مبتلا به <strong class="em">بتا تالاسمی ماژور</strong>. آهن اضافی ترجیحاً در بافت قلب (موجب کاردیومیوپاتی و مرگ)، کبد (سیروز کبدی و نارسایی) و پوست (تیرگی شدید برنزه) رسوب می‌نماید.
+    </p>
+
+    <div class="grid2">
+      <div class="mini-card mc-red">
+        <h5>روش‌های درمانی قدیمی و تزریقی</h5>
+        <ul class="list-styled red">
+          <li>
+            <span class="li-content"><strong>فلبوتومی متناوب (Flebotomy):</strong> خون‌گیری دوره‌ای در بیماران هموکروماتوز ارثی (در صورت هموگلوبین پایدار).</span>
+          </li>
+          <li>
+            <span class="li-content"><strong>پمپ زیرپوستی دفروکسامین:</strong> اتصال سوزن دیسفرال زیر پوست شکم با پمپ اتوماتیک شبانه به مدت ۸ تا ۱۲ ساعت.</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="mini-card mc-green">
+        <h5>انقلاب درمانی با داروهای چنگ‌کننده خوراکی</h5>
+        <p style="font-size: 13.5px;">
+          خوشبختانه با ورود فرآورده‌های خوراکی شلاته‌کننده به بازار، کیفیت زندگی بیماران تالاسمی دچار دگرگونی شد. قرص‌های خوراکی <strong class="em3">دفراسیروکس (Deferasirox / Exjade)</strong> و <strong class="em3">دفریپرون (Deferiprone)</strong> جایگزین پمپ‌های تزریقی شدند و آهن رسوب‌کرده در بافت‌ها را از طریق ادرار و مدفوع دفع می‌کنند.
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ===================== SECTION 6 ===================== -->
+  <div class="section-header sh-purple" id="sec6">
+    <div class="icon">🔬</div>
+    <span>۶. ویتامین B12 (کوبالامین)، مسیر جذب، علل کمبود و درمان</span>
+  </div>
+
+  <div class="subsection sub-purple">
+    <h4>مکانیسم فیزیولوژیک جذب ویتامین B12</h4>
+    <p>
+      ویتامین B12 موجود در مواد غذایی حیوانی برای جذب نیازمند اسید معده جهت رهاسازی از پروتئین‌هاست. سپس در دئودنوم به <strong class="em4">فاکتور داخلی (Intrinsic Factor - IF)</strong> متصل می‌شود. فاکتور داخلی یک گلیکوپروتئین مترشحه از سلول‌های پاریتال جدار معده است. کمپلکس B12-IF به سلامت به بخش انتهای روده باریک (<strong class="em4">ایلئوم دیستال</strong>) رسیده و از آنجا جذب خون می‌گردد.
+    </p>
+
+    <div class="infobox ib-purple">
+      <span class="ib-icon">⚠️</span>
+      <div>
+        <strong>علت اصلی کمبود B12؛ نقص جذب است نه کمبود غذایی!</strong>
+        به دلیل ذخیره بالای کبدی ویتامین B12 (برای حدود ۳ تا ۵ سال)، کمبود غذایی بسیار دیر رخ می‌دهد. اتیولوژی‌های شایع کمبود عبارتند از:
+        <ul style="margin-right: 15px;">
+          <li><strong class="em">کم‌خونی پرنیشیوز (Pernicious Anemia):</strong> بیماری خودایمنی تخریب‌کننده سلول‌های پاریتال معده و تولید آنتی‌بادی ضد فاکتور داخلی (همراه با اختلال عصبی شدید).</li>
+          <li><strong class="em">برداشتن کامل یا بخشی از معده (Gastrectomy):</strong> عدم ترشح فاکتور داخلی.</li>
+          <li><strong class="em">بیماری‌های روده باریک:</strong> نظیر سلیاک، کرون یا رزکسیون ایلئوم دیستال.</li>
+          <li><strong class="em">رژیم‌های مطلقاً گیاه‌خواری (Vegan):</strong> وگان‌های مطلق در درازمدت نیاز مبرم به مصرف مکمل دارند.</li>
+        </ul>
+      </div>
+    </div>
+
+    <h4>فارماکوتراپی و پروتکل‌های درمانی ویتامین B12</h4>
+    <p>
+      مسیر طلایی تجویز در صورت آسیب به سیستم جذب، روش <strong class="em4">تزریق عضلانی (IM)</strong> است.
+    </p>
+    <ul class="list-styled purple">
+      <li>
+        <span class="li-content"><strong>فرآورده‌های دارویی:</strong> سیانوکوبالامین (Cyanocobalamin) یا <strong class="em4">هیدروکسوکوبالامین (Hydroxocobalamin)</strong>. هیدروکسوکوبالامین به علت اتصال پروتئینی قوی‌تر و پایداری بیشتر در گردش خون ترجیح داده می‌شود.</span>
+      </li>
+      <li>
+        <span class="li-content"><strong>پروتکل فاز حاد:</strong> دوز ۱۰۰ تا ۱۰۰۰ میکروگرم روزانه یا یک‌روزدرمیان به مدت ۱ الی ۲ هفته جهت اشباع ذخایر بدنی و کاهش تظاهرات عصبی.</span>
+      </li>
+      <li>
+        <span class="li-content"><strong>پروتکل نگه‌دارنده:</strong> ۱۰۰ تا ۱۰۰۰ میکروگرم تزریق عضلانی به صورت ماهیانه.</span>
+      </li>
+      <li>
+        <span class="li-content"><strong>طول درمان در آنمی پرنیشیوز یا گاسترکتومی:</strong> به صورت <strong class="em">مادام‌العمر (Lifelong)</strong> است.</span>
+      </li>
+      <li>
+        <span class="li-content"><strong>نکته در بیماران دیالیزی:</strong> ویتامین B12 به صورت محلول وریدی (IV) به درون ست دیالیز تزریق می‌شود تا از خونریزی‌های ناشی از تزریق عضلانی (IM) به دلیل مصرف فاکتورهای ضدانعقاد ممانعت گردد.</span>
+      </li>
+    </ul>
+  </div>
+
+
+  <!-- ===================== SECTION 7 ===================== -->
+  <div class="section-header sh-green" id="sec7">
+    <div class="icon">🌿</div>
+    <span>۷. اسید فولیک (فولات)، نقایص جنینی، اتیولوژی کمبود و فارماکوتراپی</span>
+  </div>
+
+  <div class="subsection sub-green">
+    <h4>نقش بیولوژیک فولیک اسید در سنتز DNA</h4>
+    <p>
+      فولیک اسید پس از تبدیل به فرم فعال، به عنوان کوفاکتور کلیدی در مسیر سنتز پورین‌ها، پیریمیدین‌ها و اسید نوکلئیک نقش‌آفرینی می‌کند. کمبود فولات سلول‌هایی با سرعت تکثیر بالا نظیر گلبول‌های قرمز را تحت تأثیر قرار داده و تقسیم سلولی را متوقف می‌کند که منجر به بروز گلبول‌های قرمز بزرگ و ناکارآمد (کم‌خونی مگالوبلاستیک) می‌گردد.
+    </p>
+
+    <div class="infobox ib-green">
+      <span class="ib-icon">👶</span>
+      <div>
+        <strong>نقایص لوله عصبی جنین (NTD):</strong> کمبود فولات مادر در اوایل بارداری ریسک بروز اسپینا بیفیدا را در جنین به شدت بالا می‌برد. از این رو، شروع مصرف مکمل فولیک اسید از <strong class="em3">۳ ماه قبل از بارداری</strong> برای تمام خانم‌ها الزامی و حیاتی قلمداد می‌شود. این مکمل در گروه بارداری <strong class="em3">گروه A</strong> (کاملاً ایمن) قرار دارد.
+      </div>
+    </div>
+
+    <h4>گروه‌های پرخطر و داروهای ضدفولات</h4>
+    <ul class="list-styled green">
+      <li>
+        <span class="li-content"><strong>افراد الکلیسم و بیماران مزمن کبدی:</strong> به دلیل تغذیه نامناسب و سوءجذب شدید فولات در روده.</span>
+      </li>
+      <li>
+        <span class="li-content"><strong>آنمی‌های همولیتیک و همودیالیز:</strong> به دلیل ترن‌اور بسیار سریع و خروج فولات طی دیالیز.</span>
+      </li>
+      <li>
+        <span class="li-content"><strong>داروهای ضدفولات:</strong> متوترکسات (داروی شیمی‌درمانی و روماتولوژی)، پیریمتامین، تری‌متوپریم و داروی ضدتشنج فنی‌توئین. این داروها با مهار آنزیم دی‌هیدروفولات ردوکتاز یا کاهش جذب، موجب نقص ثانویه فولات می‌شوند.</span>
+      </li>
+    </ul>
+
+    <h4>درمان فقر فولیک اسید</h4>
+    <p>
+      فرآورده به شکل قرص‌های خوراکی <strong class="em2">۱ میلی‌گرمی</strong> (در افراد عادی و بارداری) و قرص <strong class="em2">۵ میلی‌گرمی</strong> (در دیالیز و شرایط خاص) عرضه می‌شود. 
+    </p>
+    <div class="infobox ib-green">
+      <span class="ib-icon">💡</span>
+      <div>
+        <strong>جذب خوراکی فوق‌العاده قوی:</strong> اسید فولیک حتی در شرایط سوءجذب شدید روده‌ای نیز به خوبی از روده جذب خون می‌شود؛ به همین دلیل به ندرت نیاز به فرآورده‌های تزریقی اسید فولیک به وجود می‌آید و درمان خوراکی همواره خط اول و قطعی است.
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ===================== SECTION 8 ===================== -->
+  <div class="section-header sh-cyan" id="sec8">
+    <div class="icon">🦠</div>
+    <span>۸. فاکتورهای رشد خون‌ساز (Hematopoietic Growth Factors)</span>
+  </div>
+
+  <div class="subsection sub-cyan">
+    <h4>۱. اریتروپویتین (Erythropoietین - EPO / Darbepoetin alfa)</h4>
+    <p>
+      اریتروپویتین گلیکوپروتئینی است که ترشح کلیوی داشته و ساخت سلول‌های قرمز را در مغز استخوان فعال می‌سازد.
+    </p>
+    
+    <div class="kv-row">
+      <span class="kv-key">اندیکاسیون‌های تجویز:</span>
+      <span class="kv-value">بیماران مبتلا به نارسایی مزمن کلیه (CKD)، بیماران HIV تحت درمان با زیدوودین، آنمی ناشی از شیمی‌درمانی در سرطان‌ها (با Hb &lt; 10 g/dL) و اعمال جراحی غیراورژانسی.</span>
+    </div>
+    <div class="kv-row">
+      <span class="kv-key">مهم‌ترین نکته بالینی:</span>
+      <span class="kv-value">اگر یک بیمار عادی با هموگلوبین زیر ۱۰ به اورژانس مراجعه کند، اقدام اولیه <strong class="em">ترزیق خون (Packed Red Cells)</strong> است، نه اریتروپویتین. مصرف اریتروپویتین تنها در آنمی‌های مزمن کاربرد دارد.</span>
+    </div>
+    <div class="kv-row">
+      <span class="kv-key">مسیر تجویز بهینه:</span>
+      <span class="kv-value">فرآورده در ایران با نام تجاری <strong class="em2">اکس (Eprex)</strong> به صورت دوزهای ۱۰۰۰ و ۵۰۰۰ واحدی موجود است. مسیر ترزیق <strong class="em2">زیرجلدی (SC)</strong> به علت اثربخشی پایدارتر بر روش وریدی (IV) برتری دارد.</span>
+    </div>
+    <div class="kv-row">
+      <span class="kv-key">عوارض جدی:</span>
+      <span class="kv-value"><strong class="em">افزایش شدید فشار خون</strong> (به ویژه در CKD)، افزایش ریسک ترومبوز در صورت بالا رفتن سریع هموگلوبین به بالای ۱۱، و عارضه نادر آپلازی خالص سلول‌های قرمز خون (PRCA).</span>
+    </div>
+
+    <h4 style="margin-top: 25px;">۲. فاکتورهای محرک رده میلوئیدی (G-CSF و GM-CSF)</h4>
+    <p>
+      داروهایی که نوتروفیل‌ها را تحریک کرده و نوتروپنی را در بیماران تحت شیمی‌درمانی یا پیوند مغز استخوان کاهش می‌دهند.
+    </p>
+    
+    <div class="kv-row">
+      <span class="kv-key">فیلگراستیم (G-CSF):</span>
+      <span class="kv-value">به صورت اختصاصی رده نوتروفیل را تحریک می‌کند (همانند پگ‌فیلگراستیم).</span>
+    </div>
+    <div class="kv-row">
+      <span class="kv-key">سارگراموستیم (GM-CSF):</span>
+      <span class="kv-value">رده‌های وسیع‌تری از سلول‌های میلوئیدی شامل نوتروفیل، مونوسیت و ائوزینوفیل را تحریک می‌کند.</span>
+    </div>
+    <div class="kv-row">
+      <span class="kv-key">عوارض جانبی شاخص:</span>
+      <span class="kv-value"><strong class="em">دردهای استخوانی (Bone Pain)</strong> بسیار شایع است که بلافاصله با اتمام دوره درمان کاملاً بهبود می‌یابد. عوارض نادر شامل <strong class="em">پارگی طحال (Splenic Rupture)</strong> و سندروم نشت مویرگی است.</span>
+    </div>
+
+    <h4 style="margin-top: 25px;">۳. فاکتورهای رشد مگاکاریوسیتی (تحریک پلاکت‌ها)</h4>
+    
+    <div class="kv-row">
+      <span class="kv-key">اینترلوکین ۱۱ (IL-11):</span>
+      <span class="kv-value">فرم نوترکیب IL-11 (مانند Oprelvekin) که با تحریک ساخت پلاکت‌ها مانع ترومبوسیتوپنی ناشی از شیمی‌درمانی سرطان‌های غیرمیلوئیدی می‌شود.</span>
+    </div>
+    <div class="kv-row">
+      <span class="kv-key">آگونیست‌های گیرنده TPO:</span>
+      <span class="kv-value">فرآورده‌های جدیدتر نظیر <strong class="em4">رومیپلوستیم (Romiplostim)</strong> (پپتید متصل به آنتی‌بادی با تزریق زیرجلدی هفتگی) و <strong class="em4">الترومبوپگ (Eltrombopag)</strong> (مولکول کوچک خوراکی روزانه). کاربرد اصلی آن‌ها در درمان ترومبوسیتوپنی ایمنی مزمن (ITP) مقاوم است.</span>
+    </div>
+  </div>
+
+
+  <!-- ===================== SECTION 9 ===================== -->
+  <div class="section-header sh-indigo" id="sec9">
+    <div class="icon">📊</div>
+    <span>۹. جدول مقایسه‌ای نهایی و نکات طلایی و امتحانی</span>
+  </div>
+
+  <div class="subsection sub-indigo">
+    <h4>خلاصه مقایسه‌ای جامع داروهای کم‌خونی و فاکتورهای رشد</h4>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>فرآورده دارویی</th>
+            <th>اندیکاسیون اصلی بالینی</th>
+            <th>روش مصرف ارجح</th>
+            <th>دوز درمان استاندارد</th>
+            <th>عوارض جانبی شاخص</th>
+            <th>مهم‌ترین نکته کلیدی کنکوری</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Ferrous Sulfate</strong></td>
+            <td>کم‌خونی فقر آهن عمومی</td>
+            <td>خوراکی (ناشتا)</td>
+            <td>150-200 mg/day آهن عنصری</td>
+            <td>درد شکم، یبوست، تیره شدن مدفوع</td>
+            <td>با چای مصرف نشود؛ تیره شدن مدفوع ملنا نیست.</td>
+          </tr>
+          <tr>
+            <td><strong>Iron Dextran (IV)</strong></td>
+            <td>عدم تحمل خوراکی، سوءجذب</td>
+            <td>وریدی (IV)</td>
+            <td>محاسبه دقیق بر اساس Hb بیمار</td>
+            <td>واکنش آنافیلاکسی و هیپوتانسیون</td>
+            <td>تست دوز قبل از تزریق دوز اصلی کاملاً الزامی است.</td>
+          </tr>
+          <tr>
+            <td><strong>Venofer (Iron Sucrose)</strong></td>
+            <td>بیماران همودیالیزی و آنمی عمومی</td>
+            <td>وریدی (IV)</td>
+            <td>100-200 mg در سرم یا دیالیز</td>
+            <td>طعم فلزی در دهان، تب، گرگرفتگی</td>
+            <td>در بیمار عادی به علت حساسیت نوری فویل کشیده شود.</td>
+          </tr>
+          <tr>
+            <td><strong>Vitamin B12</strong></td>
+            <td>آنمی پرنیشیوز، گاسترکتومی، وگان</td>
+            <td>عضلانی (IM)</td>
+            <td>100-1000 mcg روزانه سپس ماهیانه</td>
+            <td>بسیار ایمن، در آغاز درمان: هیپوکالمی</td>
+            <td>در آنمی پرنیشیوز درمان مادام‌العمر است.</td>
+          </tr>
+          <tr>
+            <td><strong>Folic Acid</strong></td>
+            <td>پیشگیری از NTD جنین، الکلیسم، دیالیز</td>
+            <td>خوراکی</td>
+            <td>1 mg/day (در دیالیز: 5 mg/day)</td>
+            <td>بسیار بی‌خطر و ایمن (گروه A)</td>
+            <td>از ۳ ماه قبل بارداری شروع شود؛ جذب خوراکی عالی.</td>
+          </tr>
+          <tr>
+            <td><strong>Epoetin (Eprex)</strong></td>
+            <td>آنمی ناشی از CKD و شیمی‌درمانی</td>
+            <td>زیرجلدی (SC)</td>
+            <td>۵۰ الی ۱۰۰ واحد به ازای کیلوگرم</td>
+            <td>افزایش فشار خون، آپلازی خالص سرخ (PRCA)</td>
+            <td>هدف Hb نباید از ۱۱ بگذرد؛ در آنمی حاد ابتدا ترانسیفیوژن.</td>
+          </tr>
+          <tr>
+            <td><strong>Filgrastim (G-CSF)</strong></td>
+            <td>نوتروپنی ناشی از شیمی‌درمانی</td>
+            <td>زیرجلدی (SC) یا IV</td>
+            <td>۵ میکروگرم به ازای کیلوگرم روزانه</td>
+            <td>دردهای استخوانی گذرای اسکلتی</td>
+            <td>با توقف درمان درد استخوانی بلافاصله قطع می‌شود.</td>
+          </tr>
+          <tr>
+            <td><strong>Eltrombopag</strong></td>
+            <td>ترومبوسیتوپنی مزمن (ITP)، هپاتیت C</td>
+            <td>خوراکی (Oral)</td>
+            <td>۲۵ الی ۷۵ میلی‌گرم روزانه</td>
+            <td>سمیت کبدی حاد (افزایش آنزیم‌ها)</td>
+            <td>یک آگونیست غیرپپتیدی کوچک گیرنده ترومبوپویتین است.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h4 style="margin-top: 30px;">⭐ نکات طلایی امتحانی و تست‌های رایج</h4>
+    <div class="grid2">
+      <div class="mini-card mc-red">
+        <h5>🚨 هشدارهای حیاتی آزمون‌ها</h5>
+        <ul class="list-styled red">
+          <li>
+            <span class="li-content"><strong>آهن در مردان/یائسه‌ها:</strong> فقر آهن بدون علت در این افراد فوراً نیازمند بررسی کولونوسکوپی از نظر سرطان گوارشی است.</span>
+          </li>
+          <li>
+            <span class="li-content"><strong>نور در تزریق آهن:</strong> ویال‌های ونوفیر درون سرم بیمار غیردیالیزی حتماً باید محافظت در برابر نور داشته باشند.</span>
+          </li>
+          <li>
+            <span class="li-content"><strong>تفکیک B12 و فولات:</strong> با تست بیوشیمیایی MMA یا علائم عصبی نظیر پارستزی متمایز می‌شوند.</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="mini-card mc-green">
+        <h5>💡 اولویت‌های فارماکولوژی بالینی</h5>
+        <ul class="list-styled green">
+          <li>
+            <span class="li-content"><strong>درمان فقر فولات در سلیاک:</strong> به دلیل جذب عالی روده، حتماً از مسیر خوراکی درمان انجام شود و تزریقی نیاز نیست.</span>
+          </li>
+          <li>
+            <span class="li-content"><strong>مایعات در آهن خوراکی:</strong> در صورت بروز یبوست ناشی از فروس سولفات، نوشیدن مقادیر بالای آب و فیبر توصیه می‌شود.</span>
+          </li>
+          <li>
+            <span class="li-content"><strong>شستشوی روده در سمیت حاد:</strong> در سمیت‌های شدید با تعداد بالای قرص، روش Whole Bowel Irrigation ارجحیت دارد.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</div> <!-- END MAIN -->
+
+<!-- ===================== FOOTER ===================== -->
+<div class="footer">
+  <p>📚 مرجع علمی جامع درس فارماکولوژی ۲ — مبحث فرآورده‌های خونی و کم‌خونی</p>
+  <p style="margin-top: 8px; font-size: 0.85em; opacity: 0.7;">تهیه‌شده توسط احمدرضا عبداللهی‌پور </p>
+</div>
+
+
+<!-- ===================== کدهای تعاملی اصلاح‌شده مانیفست مطالعه ===================== -->
+<script>
+  // حل بحران لود شدن کدهای مخرب قدیمی از کش مرورگر با پاکسازی خودکار
+  const oldStateKeys = [
+    "pharma2_html_state_v4", 
+    "pharma2_html_state_v3", 
+    "pharma2_html_state_v2", 
+    "pharma_html_state_v3",
+    "pharma_html_state_v2",
+    "pharma_study_notes",
+    "pharma2_study_notes"
+  ];
+  oldStateKeys.forEach(k => localStorage.removeItem(k));
+
+  const storageStateKey = "pharma2_html_state_v5_final";
+  let savedRange = null; 
+  let activeMarker = null;
+
+  document.addEventListener("DOMContentLoaded", () => {
+    loadPageState();
+  });
+
+  // ذخیره کل کدهای داخل کانتینر محتوا در localStorage برای ماندگاری کامل تغییرات
+  function savePageState() {
+    const mainHTML = document.querySelector('.main').innerHTML;
+    localStorage.setItem(storageStateKey, mainHTML);
+  }
+
+  // لود تغییرات ذخیره شده
+  function loadPageState() {
+    const savedHTML = localStorage.getItem(storageStateKey);
+    if (savedHTML) {
+      document.querySelector('.main').innerHTML = savedHTML;
+    }
+  }
+
+  // هایلایت بومی سازگار با iOS/Safari و مابقی مرورگرها بدون به هم ریختن استایل
+  function applyColorHighlight(colorHex) {
+    const selection = window.getSelection();
+    if (!selection.rangeCount || selection.isCollapsed) {
+      alert("لطفاً ابتدا متنی از جزوه را با ماوس یا لمس طولانی انتخاب کنید.");
+      return;
+    }
+
+    const main = document.querySelector('.main');
+    const originalEditable = main.contentEditable;
+    
+    main.contentEditable = "true";
+    
+    try {
+      document.execCommand("styleWithCSS", false, true);
+      document.execCommand("backColor", false, colorHex);
+    } catch (e) {
+      console.error("خطای هایلایت:", e);
+    }
+    
+    main.contentEditable = originalEditable;
+    selection.removeAllRanges();
+    savePageState();
+  }
+
+  // پاک کردن بومی و کامل هایلایت‌های اعمال شده با دستور بومی مرورگر
+  function clearSelectedHighlight() {
+    applyColorHighlight('transparent');
+  }
+
+  // ثبت محدوده انتخاب کاربر دقیقا قبل از باز شدن مودال (حل مشکل سافاری آیفون)
+  function addNoteAtSelection() {
+    const selection = window.getSelection();
+    if (!selection.rangeCount || selection.isCollapsed) {
+      alert("لطفاً ابتدا بخشی از متن را با کشیدن انگشت یا ماوس انتخاب کنید تا یادداشت به آنجا متصل شود.");
+      return;
+    }
+
+    // کپی برداری عمیق از رنج انتخابی برای دور زدن لغو سلکشن در هنگام فوکوس روی فیلد متن آیفون
+    savedRange = selection.getRangeAt(0).cloneRange();
+    
+    activeMarker = null; 
+    document.getElementById("modal-title").innerText = "ثبت یادداشت جدید در این محل";
+    document.getElementById("modal-note-input").value = "";
+    document.getElementById("btn-delete-note").style.display = "none";
+    document.getElementById("note-edit-modal").style.display = "flex";
+  }
+
+  // ذخیره نهایی یادداشت جدید یا اعمال ویرایش روی یادداشت‌های قبلی
+  function saveNoteChanges() {
+    const text = document.getElementById("modal-note-input").value.trim();
+    if (!text) {
+      alert("لطفاً متن یادداشت را وارد کنید.");
+      return;
+    }
+
+    if (activeMarker === null) {
+      // استفاده از محدوده ذخیره شده قبل از فعال شدن فوکوس مودال
+      if (savedRange) {
+        const marker = document.createElement("span");
+        marker.className = "note-marker";
+        marker.setAttribute("data-note", text);
+        // تولتیپ خالص سی‌اس‌اس را درون تگ تزریق می‌کنیم تا نسخه خروجی بدون جاوا اسکریپت در نمایشگر پیش‌فرض آیفون نیز کار کند
+        marker.innerHTML = `📝<span class="note-tooltip">${escapeHTML(text)}</span>`;
+        marker.contentEditable = "false";
+        
+        try {
+          savedRange.collapse(false); // انتقال به انتهای بخش منتخب
+          savedRange.insertNode(marker);
+        } catch (e) {
+          console.error("Error inserting marker:", e);
+          alert("امکان درج یادداشت در این بخش به دلیل تداخل تگ‌ها وجود ندارد. لطفا متن ساده‌تری را انتخاب کنید.");
+        }
+        savedRange = null; // ریست کردن برای جلوگیری از تداخل
+      } else {
+        alert("محدوده متن انتخاب شده معتبر نیست. لطفاً مجدداً متن را انتخاب کنید.");
+        return;
+      }
+    } else {
+      // ویرایش یادداشت ثبت شده از قبل
+      activeMarker.setAttribute("data-note", text);
+      activeMarker.innerHTML = `📝<span class="note-tooltip">${escapeHTML(text)}</span>`;
+    }
+
+    closeNoteModal();
+    savePageState();
+  }
+
+  // حذف یادداشت فعال
+  function deleteActiveNote() {
+    if (activeMarker && confirm("آیا مایل به حذف این یادداشت هستید؟")) {
+      activeMarker.remove();
+      closeNoteModal();
+      savePageState();
+    }
+  }
+
+  // بستن مودال ثبت یادداشت
+  function closeNoteModal() {
+    document.getElementById("note-edit-modal").style.display = "none";
+    activeMarker = null;
+    savedRange = null;
+  }
+
+  // گوش دادن به رویداد کلیک روی نشانه‌های یادداشت درون‌متنی (حتی پس از لود مجدد صفحه)
+  document.addEventListener("click", (e) => {
+    if (e.target.classList.contains("note-marker")) {
+      activeMarker = e.target;
+      const savedText = activeMarker.getAttribute("data-note") || "";
+      document.getElementById("modal-title").innerText = "مشاهده و ویرایش یادداشت";
+      document.getElementById("modal-note-input").value = savedText;
+      document.getElementById("btn-delete-note").style.display = "inline-block";
+      document.getElementById("note-edit-modal").style.display = "flex";
+    }
+  });
+
+  // باز کردن مودال کل یادداشت‌ها جهت مرور یکجای خلاصه‌ها
+  function viewAllNotes() {
+    const markers = document.querySelectorAll(".note-marker");
+    const listContainer = document.getElementById("all-notes-list");
+    listContainer.innerHTML = "";
+
+    if (markers.length === 0) {
+      listContainer.innerHTML = '<p style="text-align:center; color:var(--muted); font-size:14px; padding:20px 0;">هیچ یادداشتی در کل متن ثبت نشده است.</p>';
+      document.getElementById("all-notes-modal").style.display = "flex";
+      return;
+    }
+
+    markers.forEach((marker, index) => {
+      const noteText = marker.getAttribute("data-note") || "";
+      const context = marker.previousSibling ? marker.previousSibling.textContent.slice(-35) : "...";
+      
+      const card = document.createElement("div");
+      card.className = "mini-card mc-blue";
+      card.style.marginBottom = "12px";
+      card.innerHTML = `
+        <div style="font-size:11px; color:var(--muted); margin-bottom:5px;">یادداشت شماره ${index + 1} (متن مجاور: "...${escapeHTML(context)}")</div>
+        <div style="font-weight:bold; font-size:14px; line-height:1.6; white-space:pre-wrap; color:var(--text);">${escapeHTML(noteText)}</div>
+        <div style="margin-top:10px; display:flex; gap:8px;">
+          <button onclick="scrollToMarker(${index})" class="tag tag-blue" style="border:none; cursor:pointer; padding:4px 10px;">🔍 پرش به محل یادداشت</button>
+          <button onclick="deleteMarkerFromList(${index})" class="tag tag-red" style="border:none; cursor:pointer; padding:4px 10px;">❌ حذف</button>
+        </div>
+      `;
+      listContainer.appendChild(card);
+    });
+
+    document.getElementById("all-notes-modal").style.display = "flex";
+  }
+
+  // پرش به موقعیت یادداشت و افکت چشمک زن برای مکان‌یابی آنی
+  window.scrollToMarker = function(index) {
+    const markers = document.querySelectorAll(".note-marker");
+    if (markers[index]) {
+      closeAllNotesModal();
+      markers[index].scrollIntoView({ behavior: "smooth", block: "center" });
+      
+      const originalBg = markers[index].style.backgroundColor;
+      markers[index].style.backgroundColor = "#ff5252";
+      markers[index].style.transform = "scale(1.4)";
+      
+      setTimeout(() => {
+        markers[index].style.backgroundColor = originalBg;
+        markers[index].style.transform = "scale(1)";
+      }, 1500);
+    }
+  };
+
+  // حذف مستقیم یادداشت از لیست جامع
+  window.deleteMarkerFromList = function(index) {
+    if (confirm("آیا مایل به حذف این یادداشت هستید؟")) {
+      const markers = document.querySelectorAll(".note-marker");
+      if (markers[index]) {
+        markers[index].remove();
+        savePageState();
+        viewAllNotes(); 
+      }
+    }
+  };
+
+  // ذخیره و دانلود فایل نهایی با هایلایت‌ها و یادداشت‌های هک‌شده درون کد (بدون نیاز به جاوا اسکریپت)
+  function exportModifiedHTML() {
+    const docClone = document.cloneNode(true);
+    
+    // کپی کردن محتوای تغییریافته به کلون جدید سند جهت خروجی نهایی
+    const currentMainHTML = document.querySelector('.main').innerHTML;
+    docClone.querySelector('.main').innerHTML = currentMainHTML;
+    
+    const htmlString = '<!DOCTYPE html>\n' + docClone.documentElement.outerHTML;
+    
+    const blob = new Blob([htmlString], { type: "text/html;charset=utf-8" });
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = "جزوه_فارماکولوژی_نهایی.html";
+    link.click();
+  }
+
+  function closeAllNotesModal() {
+    document.getElementById("all-notes-modal").style.display = "none";
+  }
+
+  function escapeHTML(str) {
+    return str.replace(/[&<>'"]/g, 
+      tag => ({
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        "'": '&#39;',
+        '"': '&quot;'
+      }[tag] || tag)
+    );
+  }
+</script>
+
+</body>
+</html>
